@@ -1,0 +1,9 @@
+# import * from "graphql/EchoResolver/EchoSchema.gql"
+
+type Query {
+    liveness: Liveness!
+}
+
+type Liveness {
+    status: Boolean
+}
