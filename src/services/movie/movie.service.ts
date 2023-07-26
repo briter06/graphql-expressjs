@@ -4,8 +4,11 @@ import persistenceService from "@services/persistence/persistence.service";
 import { DB_TYPES } from "@services/persistence/persistence.model";
 
 class MovieService implements IMovieService {
-  getAllMovies(): Movie[] {
-    return persistenceService.get<Movie>(DB_TYPES.MOVIES)
+  getAllMovies(ids: number[]): Movie[] {
+    const movies = persistenceService.get<Movie>(DB_TYPES.MOVIES);
+    return ids.length === 0
+      ? movies
+      : movies.filter((movie) => ids.includes(movie.id));
   }
 }
 

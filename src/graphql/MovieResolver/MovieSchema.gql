@@ -1,3 +1,5 @@
+# import * from "../ActorResolver/ActorSchema.gql"
+
 type Query {
     movies: [Movie]!
 }
@@ -7,5 +9,5 @@ type Movie {
     name: String!
     genre: String!
     rating: String!
-    cast: [Int]!
+    cast: [Actor]!
 }
