@@ -1,0 +1,11 @@
+type Query {
+    movies: [Movie]!
+}
+
+type Movie {
+    id: Int!
+    name: String!
+    genre: String!
+    rating: String!
+    cast: [Int]!
+}

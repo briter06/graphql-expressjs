@@ -1,4 +1,5 @@
-# import * from "graphql/EchoResolver/EchoSchema.gql"
+# import * from "graphql/MovieResolver/MovieSchema.gql"
+# import * from "graphql/ActorResolver/ActorSchema.gql"
 
 type Query {
     liveness: Liveness!
