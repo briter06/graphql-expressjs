@@ -41,6 +41,7 @@
   },
   "_moduleAliases": {
     "@config": "dist/config",
-    "@services": "dist/services"
+    "@services": "dist/services",
+    "@utils": "dist/utils"
   }
 }

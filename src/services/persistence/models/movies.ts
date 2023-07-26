@@ -3,5 +3,5 @@ export type Movie = {
     name: string
     genre: string
     rating: string
-    cast: number[]
+    cast?: number[]
 }
