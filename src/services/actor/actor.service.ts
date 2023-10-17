@@ -9,11 +9,11 @@ class ActorService implements IActorService {
   getAllActors(ids: number[]): Actor[] {
     const actors = persistenceService.get<Actor>(DB_TYPES.ACTORS);
     actors.forEach((actor) => {
-      actor.movies = mapAndFilter(
-        persistenceService.get<Relation>(DB_TYPES.RELATION),
-        (r: Relation) => r.actor === actor.id,
-        (r: Relation) => r.movie
-      );;
+        actor.movies = mapAndFilter(
+          persistenceService.get<Relation>(DB_TYPES.RELATION),
+          (r: Relation) => r.actor === actor.id,
+          (r: Relation) => r.movie
+        );;
     });
     return ids.length === 0
       ? actors
